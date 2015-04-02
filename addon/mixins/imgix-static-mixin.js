@@ -17,11 +17,4 @@ var ImgixStaticMixin = {
   }
 };
 
-var dprParams = (function() {
-  var dpr = Math.floor(window.devicePixelRatio) || 1;
-  if(dpr > 1) {
-    return '&dpr=' + dpr;
-  }
-}());
-
 export default ImgixStaticMixin;

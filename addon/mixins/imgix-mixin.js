@@ -13,7 +13,7 @@ var ImgixMixin = Ember.Mixin.create({
   forceDpr: false,
   processGifs: false,
 
-  _src: Ember.computed('src', 'imgixParams', 'forceDpr', function() {
+  url: Ember.computed('src', 'imgixParams', 'forceDpr', function() {
     var src = this.get('src');
     var imgixParams = this.get('imgixParams');
     var klass = this.constructor;
@@ -27,6 +27,7 @@ var ImgixMixin = Ember.Mixin.create({
     if(imgixParams) {
       params += imgixParams;
     }
+
     if(dprParams && this.get('forceDpr')) {
       params += dprParams;
     }
@@ -35,5 +36,12 @@ var ImgixMixin = Ember.Mixin.create({
   })
 
 });
+
+var dprParams = (function() {
+  var dpr = Math.floor(window.devicePixelRatio) || 1;
+  if(dpr > 1) {
+    return '&dpr=' + dpr;
+  }
+}());
 
 export default ImgixMixin;
