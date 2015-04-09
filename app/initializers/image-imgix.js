@@ -1,19 +1,19 @@
-import BackgroundImage from 'ember-cli-image/components/background-image';
-import ImageContainer from 'ember-cli-image/components/image-container';
-import XImg from 'ember-cli-image/components/x-img';
+import BackgroundImageComponent from 'ember-cli-image/components/background-image-component';
+import ImageContainerComponent from 'ember-cli-image/components/image-container-component';
+import ImgComponent from 'ember-cli-image/components/img-component';
 
 import ImgixMixin from 'ember-cli-image-imgix/mixins/imgix-mixin';
 import ImgixStaticMixin from 'ember-cli-image-imgix/mixins/imgix-static-mixin';
 
 export function initialize() {
-  BackgroundImage.reopen( ImgixMixin );
-  BackgroundImage.reopenClass( ImgixStaticMixin );
+  BackgroundImageComponent.reopen( ImgixMixin );
+  BackgroundImageComponent.reopenClass( ImgixStaticMixin );
 
-  ImageContainer.reopen( ImgixMixin );
-  ImageContainer.reopenClass( ImgixStaticMixin );
+  ImageContainerComponent.reopen( ImgixMixin );
+  ImageContainerComponent.reopenClass( ImgixStaticMixin );
 
-  XImg.reopen( ImgixMixin );
-  XImg.reopenClass( ImgixStaticMixin );
+  ImgComponent.reopen( ImgixMixin );
+  ImgComponent.reopenClass( ImgixStaticMixin );
 }
 
 export default {
