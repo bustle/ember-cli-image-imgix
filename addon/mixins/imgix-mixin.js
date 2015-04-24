@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 /**
-  `ImgixMixin` is an `XImg` Mixin that supports
+  `ImgixMixin` is an `ImgComponent` Mixin that supports
   the imgix.com image service.  It adds imgix specific
   parameters and presets to base image src urls.
 

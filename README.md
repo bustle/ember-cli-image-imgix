@@ -1,12 +1,31 @@
-# Ember-cli-image-imgix
+# ember-cli-image-imgix
 
-This README outlines the details of collaborating on this Ember addon.
+This addon builds on top of [ember-cli-image](https://github.com/bustlelabs/ember-cli-image) to add imgix.com support.
 
 ## Installation
+For Ember CLI v0.2.3 or higher
+```
+ember install ember-cli-image-imgix
+```
+or
+```
+ember install:addon ember-cli-image-imgix
+```
+## Usage
+This addon gives you the ability to specify values for `imgixParams` and `forceDpr`
+properties on all supported image components (stateful-img, background-image and image-container).
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Example
+```handlebars
+{{stateful-img src=urlHostedOnImgix imgixParams='w=90&fit=crop&crop=faces&q=70' forceDpr=false}}
+```
+
+For additional usage instructions visit [ember-cli-image's usage](https://github.com/bustlelabs/ember-cli-image#usage).
+
+
+
+## Contributing
+Fork the repository, create a feature-branch and send in a pull request.
 
 ## Running
 
